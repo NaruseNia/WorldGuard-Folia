@@ -66,10 +66,10 @@ public class WorldGuardVehicleListener extends AbstractListener {
                     if ((lastValid = WorldGuard.getInstance().getPlatform().getSessionManager().get(localPlayer)
                             .testMoveTo(localPlayer, BukkitAdapter.adapt(event.getTo()), MoveType.RIDE)) != null) {
                         vehicle.setVelocity(new Vector(0, 0, 0));
-                        vehicle.teleport(event.getFrom());
+                        vehicle.teleportAsync(event.getFrom());
                         if (Locations.isDifferentBlock(lastValid, BukkitAdapter.adapt(event.getFrom()))) {
                             Vector dir = player.getLocation().getDirection();
-                            player.teleport(BukkitAdapter.adapt(lastValid).setDirection(dir));
+                            player.teleportAsync(BukkitAdapter.adapt(lastValid).setDirection(dir));
                         }
                         return;
                     }

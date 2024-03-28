@@ -20,7 +20,8 @@ configurations {
 
 dependencies {
     "api"(project(":worldguard-core"))
-    "compileOnly"("io.papermc.paper:paper-api:1.20-R0.1-SNAPSHOT")
+    "compileOnly"("dev.folia:folia-api:1.20.4-R0.1-SNAPSHOT")
+    "compileOnly"("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
     "runtimeOnly"("org.spigotmc:spigot-api:1.20-R0.1-SNAPSHOT") {
         exclude("junit", "junit")
     }
